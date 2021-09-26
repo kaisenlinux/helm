@@ -1,0 +1,37 @@
+Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+
+--- helm-3.7.0.orig/Makefile
++++ helm-3.7.0/Makefile
+@@ -31,15 +31,10 @@ SRC := $(shell find . -type f -name '*.g
+ # Required for globs to work correctly
+ SHELL      = /usr/bin/env bash
+ 
+-GIT_COMMIT = $(shell git rev-parse HEAD)
+-GIT_SHA    = $(shell git rev-parse --short HEAD)
+-GIT_TAG    = $(shell git describe --tags --abbrev=0 --exact-match 2>/dev/null)
+-GIT_DIRTY  = $(shell test -n "`git status --porcelain`" && echo "dirty" || echo "clean")
+-
+ ifdef VERSION
+ 	BINARY_VERSION = $(VERSION)
+ endif
+-BINARY_VERSION ?= ${GIT_TAG}
++BINARY_VERSION ?= 3.7.0
+ 
+ # Only set Version if building a tag or VERSION is set
+ ifneq ($(BINARY_VERSION),)
+@@ -53,8 +48,6 @@ ifneq ($(GIT_TAG),)
+ endif
+ 
+ LDFLAGS += -X helm.sh/helm/v3/internal/version.metadata=${VERSION_METADATA}
+-LDFLAGS += -X helm.sh/helm/v3/internal/version.gitCommit=${GIT_COMMIT}
+-LDFLAGS += -X helm.sh/helm/v3/internal/version.gitTreeState=${GIT_DIRTY}
+ LDFLAGS += $(EXT_LDFLAGS)
+ 
+ # Define constants based on the client-go version
+@@ -229,6 +222,3 @@ release-notes:
+ .PHONY: info
+ info:
+ 	 @echo "Version:           ${VERSION}"
+-	 @echo "Git Tag:           ${GIT_TAG}"
+-	 @echo "Git Commit:        ${GIT_COMMIT}"
+-	 @echo "Git Tree State:    ${GIT_DIRTY}"

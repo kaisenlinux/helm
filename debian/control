@@ -1,0 +1,19 @@
+Source: helm
+Section: admin
+Priority: optional
+Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+Build-Depends: debhelper-compat (= 13),
+	       golang-go (>= 1.16),
+	       dh-golang,
+	       bash-completion,
+Standards-Version: 4.6.0
+Homepage: https://helm.sh/
+Vcs-Browser: https://gitlab.com/kaisenlinux/packages/helm
+Vcs-Git: https://gitlab.com/kaisenlinux/packages/helm.git
+XS-Go-Import-Path: github.com/helm/helm
+
+Package: helm
+Architecture: amd64 arm64 i386 armhf armel
+Depends: ${shlibs:Depends},
+	 ${misc:Depends},
+Description: The Kubernetes Package Manager

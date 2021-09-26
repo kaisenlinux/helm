@@ -1,0 +1,5 @@
+helm (3.7.0-1kaisen) kaisen-packages; urgency=medium
+
+  * First packaging for Kaisen Linux
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sat, 25 Sep 2021 02:29:59 +0200

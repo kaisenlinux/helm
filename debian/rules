@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=golang --with=bash-completion
+
+override_dh_auto_build:
+	#Compilation of Helm
+	go get -d ./...
+	make
+	#Create bash completion
+	mkdir -p bin/bash-completion
+	bin/helm completion bash > bin/bash-completion/helm
+	#Create zsh completion
+	mkdir -p bin/zsh-completion
+	bin/helm completion zsh > bin/zsh-completion/_helm
+
+override_dh_auto_test:
+
+override_dh_auto_install:
+	dh_auto_install -- --no-source
