@@ -1,2 +1,3 @@
 bin/helm usr/bin/
 bin/zsh-completion/_helm usr/share/zsh/vendor-completions/
+debian/helm.png usr/share/pixmaps

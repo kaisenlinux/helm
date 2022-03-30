@@ -1,2 +1,2 @@
 000-change-install-path
-001-remove-git-in-makefile
+001-git-and-static-version-number
