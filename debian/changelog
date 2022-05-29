@@ -1,3 +1,10 @@
+helm (3.9.0-1kaisen) kaisen-packages; urgency=medium
+
+  * Import helm 3.9.0
+  * Refresh 001 patch
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sun, 29 May 2022 21:35:19 +0100
+
 helm (3.8.1-1kaisen) kaisen-packages; urgency=medium
 
   * Import helm 3.8.1
