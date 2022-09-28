@@ -16,7 +16,7 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 +	BINARY_VERSION = 3.9.3
  endif
 -BINARY_VERSION ?= ${GIT_TAG}
-+BINARY_VERSION ?= 3.9.3
++BINARY_VERSION ?= 3.10.0
  
  # Only set Version if building a tag or VERSION is set
  ifneq ($(BINARY_VERSION),)
