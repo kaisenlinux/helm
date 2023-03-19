@@ -1,3 +1,11 @@
+helm (3.11.2-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the helm 3.11.2 version
+  * Refresh the 001 patch
+  * Update the golang-go version required
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sun, 19 Mar 2023 18:53:16 +0100
+
 helm (3.10.2-1kaisen) kaisen-packages; urgency=medium
 
   * Import the helm 3.10.2 version
