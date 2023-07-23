@@ -1,7 +1,7 @@
 Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 
---- helm-3.11.3.orig/cmd/helm/version.go
-+++ helm-3.11.3/cmd/helm/version.go
+--- helm-3.12.2.orig/cmd/helm/version.go
++++ helm-3.12.2/cmd/helm/version.go
 @@ -33,7 +33,7 @@ Show the version for Helm.
  This will print a representation the version of Helm.
  The output will look something like this:
@@ -21,8 +21,8 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
  		return version.GetVersion()
  	}
  	return fmt.Sprintf("%#v", v)
---- helm-3.11.3.orig/internal/version/version.go
-+++ helm-3.11.3/internal/version/version.go
+--- helm-3.12.2.orig/internal/version/version.go
++++ helm-3.12.2/internal/version/version.go
 @@ -34,9 +34,9 @@ var (
  	// metadata is extra build time data
  	metadata = ""

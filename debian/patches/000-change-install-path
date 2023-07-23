@@ -1,7 +1,7 @@
 Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 
---- helm-3.7.0.orig/Makefile
-+++ helm-3.7.0/Makefile
+--- helm-3.12.2.orig/Makefile
++++ helm-3.12.2/Makefile
 @@ -1,5 +1,5 @@
  BINDIR      := $(CURDIR)/bin
 -INSTALL_PATH ?= /usr/local/bin
