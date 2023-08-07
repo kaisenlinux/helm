@@ -1,6 +1,13 @@
+helm (3.12.2-2kaisen) kaisen-packages; urgency=medium
+
+  * Remove golang-go as package dependancy
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Mon, 07 Aug 2023 13:39:11 +0100
+
 helm (3.12.2-1kaisen) kaisen-packages; urgency=medium
 
   * Import the helm 3.12.2 version
+  * Update the quilt patch
 
  -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sat, 22 Jul 2023 21:37:29 +0100
 

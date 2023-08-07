@@ -16,5 +16,4 @@ Package: helm
 Architecture: amd64 arm64 i386
 Depends: ${shlibs:Depends},
 	 ${misc:Depends},
-	 golang-go (>= 1.17),
 Description: The Kubernetes Package Manager
