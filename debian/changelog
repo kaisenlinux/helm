@@ -1,3 +1,17 @@
+helm (3.14.4-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the 3.14.4 release
+  * Drop the 000-change-install-path quilt patch
+  * Rename following quilt patchs:
+    - 001-git-and-static-version-number in 001-git-and-static-version-number.patch
+    - 002-no-display-git-version in 002-no-display-git-version.patch
+  * Drop the debian/install file
+  * Drop the debian/bash-completion-file
+  * Add the debian/dirs file
+  * Improvements of the packaging
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sun, 12 May 2024 21:34:48 +0200
+
 helm (3.13.1-1kaisen) kaisen-packages; urgency=medium
 
   * Import the 3.13.1 version

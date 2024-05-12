@@ -3,23 +3,19 @@
 export GOPATH=$(CURDIR)/_build
 
 %:
-	dh $@ --buildsystem=golang --with=bash-completion
+	dh $@ --buildsystem=golang --with=bash-completion --builddirectory=_build
 
 override_dh_auto_clean:
 	rm -rf $(CURDIR)/_build/ $(CURDIR)/obj-x86_64-linux-gnu/
 
 override_dh_auto_build:
-	#Compilation of Helm
 	go get -d ./...
 	make
-	#Create bash completion
-	mkdir -p bin/bash-completion
-	bin/helm completion bash > bin/bash-completion/helm
-	#Create zsh completion
-	mkdir -p bin/zsh-completion
-	bin/helm completion zsh > bin/zsh-completion/_helm
 
 override_dh_auto_test:
 
 override_dh_auto_install:
-	dh_auto_install -- --no-source
+	install -p -m 0755 $(CURDIR)/bin/helm $(CURDIR)/debian/helm/usr/bin/
+	install -p -m 0644 $(CURDIR)/debian/helm.png $(CURDIR)/debian/helm/usr/share/pixmaps/
+	$(CURDIR)/debian/helm/usr/bin/helm completion bash > $(CURDIR)/debian/helm/usr/share/bash-completion/completions/helm
+	$(CURDIR)/debian/helm/usr/bin/helm completion zsh > $(CURDIR)/debian/helm/usr/share/zsh/vendor-completions/_helm

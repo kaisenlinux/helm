@@ -1,3 +1,2 @@
-000-change-install-path
-001-git-and-static-version-number
-002-no-display-git-version
+001-git-and-static-version-number.patch
+002-no-display-git-version.patch
