@@ -3,10 +3,10 @@ Section: admin
 Priority: optional
 Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 Build-Depends: debhelper-compat (= 13),
-	       golang-go (>= 1.21),
+	       golang-go (>= 1.22),
 	       dh-golang,
 	       bash-completion,
-Standards-Version: 4.7.0
+Standards-Version: 4.7.2
 Homepage: https://helm.sh/
 Vcs-Browser: https://gitlab.com/kaisenlinux/packages/helm
 Vcs-Git: https://gitlab.com/kaisenlinux/packages/helm.git

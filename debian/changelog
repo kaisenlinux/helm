@@ -1,3 +1,12 @@
+helm (3.15.4-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the 3.15.4 release
+  * Update the 001-git-and-static-version-number.patch quilt patch
+  * Bump the Standards-Version
+  * Bump the golang-go version required to build
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sat, 17 Aug 2024 02:50:36 +0200
+
 helm (3.15.0-1kaisen) kaisen-packages; urgency=medium
 
   * Import the 3.15.0 release
