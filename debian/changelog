@@ -1,3 +1,10 @@
+helm (3.16.3-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the 3.16.3 release
+  * Update the 001-git-and-static-version-number.patch quilt patch
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sat, 17 Aug 2024 02:50:36 +0200
+
 helm (3.15.4-1kaisen) kaisen-packages; urgency=medium
 
   * Import the 3.15.4 release
